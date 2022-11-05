@@ -45,21 +45,20 @@
 </template>
 
 <script>
-import ProductBox from '@/components/Product/ProductBox.vue';
-import CategoryBox from '@/components/Category/CategoryBox.vue';
-
+import ProductBox from "../components/Product/ProductBox.vue";
+import CategoryBox from "../components/Category/CategoryBox.vue";
 export default {
-    name: "HomeView",
-    components: [ProductBox, CategoryBox],
-    props: ["baseUrl", "products", "categories"],
+    name: 'HomeView',
+    components : { ProductBox, CategoryBox},
+    props: ["baseURL", "products", "categories"],
     data() {
         return {
-            categories_size: 0,
+            category_size: 0,
             product_size: 0
         };
     },
     mounted() {
-        this.categories_size = Math.min(6, this.categories.length);
+        this.category_size = Math.min(6, this.categories.length);
         this.product_size = Math.min(8, this.products.length);
     }
 }

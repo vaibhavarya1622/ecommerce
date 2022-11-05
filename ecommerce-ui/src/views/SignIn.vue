@@ -43,7 +43,7 @@
 </template>
 
 <script>
-    const axios=require('axios');
+    import axios from 'axios';
     import swal from 'sweetalert';
 
     export default{
@@ -68,10 +68,7 @@
                 await axios({
                     method:'post',
                     url:this.baseURL+'user/signin',
-                    data:JSON.stringify(user),
-                    headers:{
-                        'Content-type':'application/json'
-                    }
+                    data:user
                 })
                 .then((res)=>{
                     //login successful, will get token in response

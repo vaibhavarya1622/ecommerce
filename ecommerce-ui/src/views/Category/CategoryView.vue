@@ -19,7 +19,7 @@
 
 <script>
   import CategoryBox from '../../components/Category/CategoryBox';
-  var axios =  require('axios');
+  import axios from 'axios';
   export default {
       name: 'CategoryView',
       components : {CategoryBox},

@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label>ImageUrl</label>
-                        <input type="text" class="form-control" v-model = "imageURL" requied>
+                        <input type="text" class="form-control" v-model = "imageUrl" requied>
                     </div>
                     <div class="form-group">
                         <label>Price</label>
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-var axios = require('axios')
+import axios from 'axios';
 import swal from 'sweetalert';
 
 export default {
@@ -54,19 +54,19 @@ export default {
             price: null
         }
     },
-    props:["baseUrl","categories"],
+    props:["baseURL","categories"],
     methods:{
         async addProduct(){
             const newProduct = {
                 categoryId : this.categoryId,
                 name : this.name,
                 description:this.description,
-                imageURL: this.imageUrl,
+                imageUrl: this.imageUrl,
                 price: this.price
             }
             await axios({
                 method: 'post',
-                url: this.baseUrl+"product/add",
+                url: this.baseURL+"product/add",
                 data: JSON.stringify(newProduct),
                 headers:{
                     'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ export default {
             .then(()=>{
                 swal({
                     text:"Product Added Successfully!!",
-                    icon:"Success",
+                    icon:"success",
                     closeOnClickOutside: false,
                 });
             })

@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "sweetalert": "^2.1.2",
-    "vue": "^3.2.37"
-  }
-}

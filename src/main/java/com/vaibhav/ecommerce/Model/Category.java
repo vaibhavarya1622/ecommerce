@@ -13,6 +13,7 @@ public class Category {
     @Column(name = "category_name")
     private @NotBlank String categoryName;
     private @NotBlank String description;
+    @Column(length = 65555)
     private @NotBlank String imageUrl;
 
     public Category(){}

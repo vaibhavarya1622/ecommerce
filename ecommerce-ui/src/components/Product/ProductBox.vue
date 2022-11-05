@@ -5,8 +5,7 @@
         </div>
         <div class="card-body">
             <router-link :to = "{name: 'ShowDetails', params: {id:product.id}}"><h5 class="card-title">{{product.name}}</h5></router-link>
-            <h3 class="card-title">{{product.name}}</h3>
-            <p class="card-text"><sup>$</sup>{{product.price}}</p>
+            <p class="card-text"><sup>₹</sup>{{product.price}}</p>
             <p class="card-text font-italic">{{product.description.substring(0,65)}}....</p>
         </div>
         <router-link id = "edit-category" :to = "{name: 'EditProduct',params:{id:product.id}}" v-show="$route.name == 'AdminProduct'">

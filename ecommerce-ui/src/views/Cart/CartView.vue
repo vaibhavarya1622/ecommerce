@@ -18,11 +18,11 @@
         <div class="col-md-5 px-3">
           <div class="card-block px-3">
             <h6 class="card-title"><router-link :to="{ name: 'ShowDetails', params: { id : cartItem.product.id } }">{{cartItem.product.name}} </router-link></h6>
-            <p id="item-price" class="mb-0 font-weight-bold">$ {{cartItem.product.price}} per unit</p>
+            <p id="item-price" class="mb-0 font-weight-bold">₹ {{cartItem.product.price}} per unit</p>
             <p id="item-quantity" class="mb-0">
               Quantity :
               <input size="1" class="p-0 h-25 border-bottom border-top-0 border-left-0 border-right-0" v-model="cartItem.quantity" /></p>
-            <p id="item-total-price" class="mb-0">Total : <span class="font-weight-bold"> $ {{cartItem.product.price*cartItem.quantity}}</span></p>
+            <p id="item-total-price" class="mb-0">Total : <span class="font-weight-bold"> ₹{{cartItem.product.price*cartItem.quantity}}</span></p>
             <br><a href="#" @click="deleteItem(cartItem.id)">Remove from Cart</a>
           </div>
         </div>
@@ -32,14 +32,14 @@
   
       <!-- display total price -->
       <div class="total-cost pt-2 text-right">
-        <h5>Total : $ {{totalCost}}</h5>
+        <h5>Total : ₹ {{totalCost}}</h5>
         <button :disabled="isDisabled()" type="button" class="btn btn-primary confirm" @click="checkout">Confirm Order</button>
       </div>
     </div>
   </template>
 
 <script>
-    const axios = require('axios')
+    import axios from 'axios';
     export default{
         data(){
             return{
@@ -53,7 +53,7 @@
         methods:{
           //go to checkout page
           checkout(){
-            this.$route.push({name:'Checkout'})
+            this.$router.push({name:'Checkout'})
           },
             isDisabled(){
                 if(this.cartItems.length === 0){

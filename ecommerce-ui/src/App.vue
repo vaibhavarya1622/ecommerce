@@ -16,8 +16,7 @@
 </template>
 
 <script>
-
-const axios = require('axios');
+import axios from 'axios';
 import NavbarComponent from "./components/NavbarComponent.vue"
 import FooterComponent from "./components/FooterComponent.vue"
 

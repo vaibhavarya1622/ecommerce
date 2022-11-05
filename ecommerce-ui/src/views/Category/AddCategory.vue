@@ -31,7 +31,7 @@
 </template>
 
 <script>
-var axios =  require('axios')
+import axios from 'axios';
 import swal from 'sweetalert';
 
 export default {

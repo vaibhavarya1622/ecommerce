@@ -40,7 +40,7 @@
 </template>
 
 <script>
-    var axios = require('axios')
+    import axios from 'axios';
     import swal from 'sweetalert';
     export default{
         data(){
@@ -58,7 +58,7 @@
         methods:{
             async editProduct(){
                 const updatedProduct = {
-                    id: this.id,
+                    id:this.id,
                     categoryId: this.categoryId,
                     name: this.name,
                     description: this.description,
@@ -66,24 +66,21 @@
                     price: this.price
                 }
                 await axios({
-                    method: 'post',
-                    url:this.baseURL+'product/update/'+this.id,
-                    data: JSON.stringify(updatedProduct),
-                    headers: {
-                        'Content-type':'application/json'
-                    }
+                method: 'post',
+                url: this.baseURL+"product/update/"+this.id,
+                data: JSON.stringify(updatedProduct),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
                 })
                 .then(()=>{
-                    //sending the event to parent to handle
-                    this.$emit("fetchData");
-                    this.$router.push({name:'AdminProduct'});
                     swal({
-                        text: "Product Edited Successfully!!",
-                        icon: "success",
-                        closeOnClickOutside:false
-                    })
+                        text:"Product Edited Successfully!!",
+                        icon:"success",
+                        closeOnClickOutside: false,
+                    });
                 })
-                .catch((err)=>console.log("Hello", err))
+            .catch(err=>console.log(err));
             }
         },
         mounted(){
