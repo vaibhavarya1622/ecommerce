@@ -2,6 +2,9 @@ package com.vaibhav.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class EcommerceApplication {
@@ -13,7 +16,7 @@ public class EcommerceApplication {
 	public WebMvcConfigurer corsConfigurer(){
 		return new WebMvcConfigurer(){
 			@Override
-			public void addCorsMapping(CorsRegistry registry){
+			public void addCorsMappings(CorsRegistry registry){
 				registry.addMapping("/").allowedOrigins("https://tranquil-sea-78476.herokuapp.com/");
 			}
 		};
