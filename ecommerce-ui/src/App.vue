@@ -23,7 +23,7 @@ import FooterComponent from "./components/FooterComponent.vue"
 export default {
   data() {
     return {
-      baseURL : "http://localhost:8080/",
+      baseURL : "https://vaibhav-ecommerce-project.herokuapp.com/",
       products : null,
       categories : null
     }
