@@ -16,6 +16,6 @@ public class EcommerceApplication {
 			public void addCorsMapping(CorsRegistry registry){
 				registry.addMapping("/").allowedOrigins("https://tranquil-sea-78476.herokuapp.com/");
 			}
-		}
+		};
 	}
 }
