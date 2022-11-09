@@ -15,7 +15,7 @@ public class Product {
     private Integer id;
 
     private @NotNull String name;
-    @Column(length = 65555555)
+    @Column(length = 65555)
     private @NotNull String imageURL;
     private @NotNull double price;
     private @NotNull String description;
