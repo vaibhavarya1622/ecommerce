@@ -4,7 +4,7 @@ runtime_config:
   jdk: openjdk8
 env_variables:
   SPRING_PROFILES_ACTIVE: "gcp,postgresql"
-  URL:"jdbc:postgresql:///ecommercedb?cloudSqlInstance=plasma-minutia-382616:us-central1:ecommerce&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=postgres&password=secret"
+  URL: jdbc:postgresql:///ecommercedb?cloudSqlInstance=plasma-minutia-382616:us-central1:ecommerce&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=postgres&password=secret
   USER: "postgres"
   PASSWORD: "secret"
   beta_settings:
