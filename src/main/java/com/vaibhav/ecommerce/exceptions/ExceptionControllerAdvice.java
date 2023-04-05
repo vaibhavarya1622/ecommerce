@@ -26,4 +26,9 @@ public class ExceptionControllerAdvice {
     public final ResponseEntity<String> handleUpdateFailException(OrderNotFoundException exception){
         return new ResponseEntity<>(exception.getMessage(),HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(value = AuthenticationFailException.class)
+    public final ResponseEntity<String> handleAuthenticFailException(AuthenticationFailException exception){
+        return new ResponseEntity<>(exception.getMessage(),HttpStatus.BAD_REQUEST);
+    }
 }

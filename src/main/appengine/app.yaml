@@ -5,10 +5,10 @@ runtime_config:
 env_variables:
   SPRING_PROFILES_ACTIVE: "gcp,postgresql"
   URL: jdbc:postgresql:///ecommercedb?cloudSqlInstance=plasma-minutia-382616:us-central1:ecommerce&socketFactory=com.google.cloud.sql.postgres.SocketFactory&user=postgres&password=secret
-  USER: "postgres"
-  PASSWORD: "secret"
+  USER: postgres
+  PASSWORD: secret
   beta_settings:
-    cloud_sql_instances: "plasma-minutia-382616:us-central1:ecommerce"
+    cloud_sql_instances: plasma-minutia-382616:us-central1:ecommerce
 handlers:
   - url: /.*
     script: this field is required, but ignored
