@@ -6,9 +6,7 @@ WORKDIR /app
 
 # Copy the pom.xml file into the container
 COPY pom.xml .
-
-# Copy the source code into the container
-COPY src ./src
+COPY src/ ./app/
 
 # Build the Maven project
 RUN mvn clean install
@@ -17,4 +15,4 @@ RUN mvn clean install
 EXPOSE 8080
 
 # Define the command to run your application
-CMD ["java", "-jar", "target/ecommerce-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-Dspring.thin.layertools=true", "-jar", "target/ecommerce-0.0.1-SNAPSHOT.jar"]

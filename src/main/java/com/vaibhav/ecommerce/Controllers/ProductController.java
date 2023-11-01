@@ -6,7 +6,6 @@ import com.vaibhav.ecommerce.Service.CategoryService;
 import com.vaibhav.ecommerce.Service.ProductService;
 import com.vaibhav.ecommerce.config.ApiResponse;
 import com.vaibhav.ecommerce.dto.ProductDto;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.vaibhav.ecommerce.Model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 

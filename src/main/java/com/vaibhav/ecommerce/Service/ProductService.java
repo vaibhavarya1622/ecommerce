@@ -5,18 +5,14 @@ import com.vaibhav.ecommerce.Model.Product;
 import com.vaibhav.ecommerce.Repository.ProductRepository;
 import com.vaibhav.ecommerce.dto.ProductDto;
 import com.vaibhav.ecommerce.exceptions.ProductNotExistException;
-import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ProductService {
-
     @Autowired
     private ProductRepository productRepository;
 
