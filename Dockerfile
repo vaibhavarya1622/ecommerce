@@ -9,7 +9,7 @@ COPY pom.xml .
 COPY src/ ./app/
 
 # Build the Maven project
-RUN mvn clean install -e
+RUN mvn clean install
 
 # Expose the port your application will run on (adjust as needed)
 EXPOSE 8080
